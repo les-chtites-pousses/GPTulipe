@@ -1,5 +1,6 @@
 import { APIApplicationCommandBasicOption, ApplicationCommandOptionType } from 'discord.js';
 
+import { BanRouletteCommandName } from '../enums/ban-roulette-command-name.js';
 import { DevCommandName, HelpOption, InfoOption } from '../enums/index.js';
 import { Language } from '../models/enum-helpers/index.js';
 import { Lang } from '../services/index.js';
@@ -54,6 +55,25 @@ export class Args {
                 name: Lang.getRef('infoOptions.translate', Language.Default),
                 name_localizations: Lang.getRefLocalizationMap('infoOptions.translate'),
                 value: InfoOption.TRANSLATE,
+            },
+        ],
+    };
+    public static readonly BANROULETTE_COMMAND: APIApplicationCommandBasicOption = {
+        name: Lang.getRef('arguments.command', Language.Default),
+        name_localizations: Lang.getRefLocalizationMap('arguments.command'),
+        description: Lang.getRef('argDescs.devCommand', Language.Default),
+        description_localizations: Lang.getRefLocalizationMap('argDescs.devCommand'),
+        type: ApplicationCommandOptionType.String,
+        choices: [
+            {
+                name: Lang.getRef('banRouletteCommandNames.start', Language.Default),
+                name_localizations: Lang.getRefLocalizationMap('banRouletteCommandNames.start'),
+                value: BanRouletteCommandName.START,
+            },
+            {
+                name: Lang.getRef('banRouletteCommandNames.result', Language.Default),
+                name_localizations: Lang.getRefLocalizationMap('banRouletteCommandNames.result'),
+                value: BanRouletteCommandName.RESULT,
             },
         ],
     };

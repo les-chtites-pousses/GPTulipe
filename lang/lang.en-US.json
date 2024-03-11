@@ -192,7 +192,8 @@
             "dev": "dev",
             "help": "help",
             "info": "info",
-            "test": "test"
+            "test": "test",
+            "ban-roulette": "ban-roulette"
         },
         "userCommands": {
             "viewDateJoined": "View Date Joined"
@@ -208,7 +209,8 @@
             "dev": "Developer use only.",
             "help": "Find help or contact support.",
             "info": "View bot info.",
-            "test": "Run the test command."
+            "test": "Run the test command.",
+            "ban-roulette": "THE BAN ROULETTE !"
         },
         "argDescs": {
             "devCommand": "Command.",
@@ -269,6 +271,10 @@
         },
         "devCommandNames": {
             "info": "info"
+        },
+        "banRouletteCommandNames": {
+            "start": "start",
+            "result": "result"
         },
         "helpOptions": {
             "contactSupport": "Contact Support",

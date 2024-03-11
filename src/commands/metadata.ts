@@ -69,6 +69,21 @@ export const ChatCommandMetadata: {
         dm_permission: true,
         default_member_permissions: undefined,
     },
+    BANROULETTE: {
+        type: ApplicationCommandType.ChatInput,
+        name: Lang.getRef('chatCommands.ban-roulette', Language.Default),
+        name_localizations: Lang.getRefLocalizationMap('chatCommands.ban-roulette'),
+        description: Lang.getRef('commandDescs.ban-roulette', Language.Default),
+        description_localizations: Lang.getRefLocalizationMap('commandDescs.ban-roulette'),
+        dm_permission: true,
+        default_member_permissions: undefined,
+        options: [
+            {
+                ...Args.BANROULETTE_COMMAND,
+                required: true,
+            },
+        ],
+    },
 };
 
 export const MessageCommandMetadata: {
